@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/listStudents">
+
+    <fragment
+        android:id="@+id/listStudents"
+        android:name="TuanQD_ViewModel.example.view.ListStudents"
+        android:label="fragment_list_students"
+        tools:layout="@layout/fragment_list_students" >
+        <action
+            android:id="@+id/action_listStudents_to_studentDetail"
+            app:destination="@id/studentDetail" />
+        <action
+            android:id="@+id/action_listStudents_to_addStudent"
+            app:destination="@id/addStudent" />
+    </fragment>
+    <fragment
+        android:id="@+id/addStudent"
+        android:name="TuanQD_ViewModel.example.view.AddStudent"
+        android:label="fragment_add_student"
+        tools:layout="@layout/fragment_add_student" >
+        <action
+            android:id="@+id/action_addStudent_to_listStudents"
+            app:destination="@id/listStudents" />
+    </fragment>
+    <fragment
+        android:id="@+id/studentDetail"
+        android:name="TuanQD_ViewModel.example.view.StudentDetail"
+        android:label="fragment_student_detail"
+        tools:layout="@layout/fragment_student_detail" />
+</navigation>
